@@ -2,14 +2,31 @@
 
 ## Índice
 
-- [Tecnologias](#tecnologias)
+- [Especificações](#especificações)
+    - [Responsáveis](#responsáveis)
+    - [Tecnologias](#tecnologias)
+    - [Deploy](#deploy)
+    - [Variáveis de Ambiente](#variáveis-de-ambiente)
+    - [Arquivos](#arquivos)
 - [Sistema](#sistema)
 - [Deploy](#deploy)
 - [Código](#código)
 - [Classe UML](#classe-uml)
 - [Documentação API](#documentação-api)
 
-## Tecnologias
+## Especificações
+
+A aplicação vai estar disponível na porta `8080`
+
+### Responsáveis
+
+> Facilita para encontrar quem foi o responsável por desenvolver esse sistema
+
+- Mariana
+- Rhavilla
+- Tsuyoshi
+
+### Tecnologias
 
 > Documentar a versão de todas as tecnologias que estão sendo utilizadas no projeto para evitar erros
 
@@ -17,6 +34,27 @@
 - Maven 3.9.6
 - JUnit X.X.X
 - Docker X.X.X
+
+### Deploy
+
+```sh
+docker-compose up
+```
+
+### Variáveis de ambiente
+
+> Facilitar a configuração do sistema utilizando variáveis de ambiente
+
+- `UVICORN_PORT`: 8000
+- `UVICORN_HOST`: 0.0.0.0
+- `UVICORN_WORKERS`: 1
+
+### Arquivos
+
+> Explicação dos arquivos existentes no diretório
+
+- `backend.Dockerfile`: Imagem do container
+- `*`: Código da aplicação
 
 ## Sistema
 

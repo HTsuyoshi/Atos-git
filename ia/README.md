@@ -2,14 +2,36 @@
 
 ## Índice
 
-- [Tecnologias](#tecnologias)
+- [Especificações](#especificações)
+    - [Responsáveis](#responsáveis)
+    - [Tecnologias](#tecnologias)
+    - [Deploy](#deploy)
+    - [Arquivos](#arquivos)
 - [LaTeX/MathJaX](#latex/mathjax)
 
-## Tecnologias
+## Especificações
+
+### Responsáveis
+
+- Mariana
+- Rhavilla
+- Tsuyoshi
+
+### Tecnologias
 
 - python 3.10.X
 - scikit-learn X.X.X
 - graphviz X.X.X
+
+### Deploy
+
+```sh
+python3 main.py
+```
+
+### Arquivos
+
+- `main.py`: Código da aplicação
 
 ## LaTeX/MathJaX
 

@@ -2,20 +2,43 @@
 
 ## Índice
 
-- [Tecnologias](#tecnologias)
-- [Sistema](#sistema)
-- [Deploy](#deploy)
+- [Especificações](#especificações)
+    - [Responsáveis](#responsáveis)
+    - [Tecnologias](#tecnologias)
+    - [Deploy](#deploy)
+    - [Variáveis de Ambiente](#variáveis-de-ambiente)
+    - [Arquivos](#arquivos)
 - [Tabelas](#tabelas)
 
-## Tecnologias
+## Especificações
+
+A aplicação vai estar disponível na porta `3389`
+
+### Responsáveis
+
+- Mariana
+- Rhavilla
+- Tsuyoshi
+
+### Tecnologias
 
 - PostgreSQL X.X.X
 
-## Deploy
+### Deploy
 
 ```sh
 terraform apply -f .
 ```
+
+### Variáveis de ambiente
+
+- `POSTGRES_DB_FILE`: ${POSTGRES\_DB\_FILE:?err}
+- `POSTGRES_USER_FILE`: ${POSTGRES\_USER\_FILE:?err}
+- `POSTGRES_PASSWORD_FILE`: ${POSTGRES\_PASSWORD\_FILE:?err}
+
+### Arquivos
+
+- `script.sh`: Script de inicialização do banco de dados
 
 ## Tabelas
 
