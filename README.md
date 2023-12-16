@@ -3,7 +3,7 @@
 ## Índice
 
 - [Descrição](#descrição)
-- [Tecnologias](#tecnologias)
+- [Especificações](#especificações)
 - [Deploy](#deploy)
 - [Especificações](#especificações)
 - [Git](#git)
@@ -13,6 +13,13 @@
 > O arquivo `README.md` principal pode conter uma descrição mais geral do projeto inteiro contendo items como: especificações, organização do repositório e onde encontrar outras informações importantes.
 
 O projeto foi desenvolvido com o objetivo de exemplificar a documentação de um projeto
+
+## Especificações
+
+### Tecnologias
+
+- Terraform X.X.X
+- Terragrunt X.X.X
 
 ### Schedule
 
@@ -28,10 +35,9 @@ gantt
     teste de integração :after a2, 24d
 ```
 
-## Tecnologias
+### Infraestrutura
 
-- Terraform X.X.X
-- Terragrunt X.X.X
+![GCP architecture sample](./assets/gcp_arch.png)
 
 ## Deploy
 
