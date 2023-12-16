@@ -3,16 +3,44 @@
 ## Índice
 
 - [Tecnologias](#tecnologias)
+- [Sistema](#sistema)
 - [Deploy](#deploy)
-- [Código](#codigo)
+- [Código](#código)
 - [Classe UML](#classe-uml)
 - [Documentação API](#documentação-api)
 
 ## Tecnologias
 
+> Documentar a versão de todas as tecnologias que estão sendo utilizadas no projeto para evitar erros
+
 - Java 21.0.1
 - Maven 3.9.6
 - JUnit X.X.X
+- Docker X.X.X
+
+## Sistema
+
+> Para o desenvolvedor ter um entendimento melhor sobre o funcionamento do sistema pode ser utilizado um diagrama de estados
+>
+> Para criar os seus flowcharts é possível usar o [editor online](https://mermaid.live/)
+
+Diagrama de estados
+
+```mermaid
+stateDiagram-v2
+    [*] --> Carrinho_vazio
+    Carrinho_vazio --> Carrinho_com_items
+    Carrinho_com_items --> Carrinho_vazio
+    Carrinho_com_items --> Finalizar_compra
+    Finalizar_compra --> Pagamento
+    Finalizar_compra --> Carrinho_com_items
+    Finalizar_compra --> Carrinho_vazio
+    Pagamento --> Pagamento_recusado
+    Pagamento --> Pagamento_aceito
+    Pagamento_aceito --> Enviado_para_entrega
+    Pagamento_recusado --> Carrinho_com_items
+    Enviado_para_entrega --> [*]
+```
 
 ## Deploy
 

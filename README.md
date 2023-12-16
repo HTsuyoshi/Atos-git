@@ -1,47 +1,78 @@
 # Documentação com Markdown
 
-O arquivo `README.md` principal pode conter uma descrição mais geral do projeto inteiro contendo items como: especificações, organização do repositório e onde encontrar outras informações importantes.
+## Índice
 
-Em subdiretórios é possível fazer uma especificação mais técnica de cada parte do projeto como a documentação do código do projeto, especificações do banco de dados, jornada do usuário, etc...
+- [Descrição](#descrição)
+- [Tecnologias](#tecnologias)
+- [Deploy](#deploy)
+- [Especificações](#especificações)
+- [Git](#git)
+
+## Descrição
+
+> O arquivo `README.md` principal pode conter uma descrição mais geral do projeto inteiro contendo items como: especificações, organização do repositório e onde encontrar outras informações importantes.
+
+O projeto foi desenvolvido com o objetivo de exemplificar a documentação de um projeto
+
+### Schedule
+
+```mermaid
+gantt
+    title Nova feature
+    dateFormat  YYYY-MM-DD
+    section Dev
+    desenvolvimento     :a1, 2014-01-01, 30d
+    integração          :a2, after a1, 20d
+    section QA
+    teste unitário      :after a1 2014-01-12  , 12d
+    teste de integração :after a2, 24d
+```
+
+## Tecnologias
+
+- Terraform X.X.X
+- Terragrunt X.X.X
+
+## Deploy
+
+Subir a aplicação:
+
+```sh
+terragrunt apply
+```
+
+## Especificações
+
+> Em subdiretórios é possível fazer uma especificação mais técnica de cada parte do projeto como a documentação do código do projeto, especificações do banco de dados, jornada do usuário, etc...
+
+O projeto contava com s
 
 Exemplo de documentação de cada parte do projeto:
 
 - [backend](./backend)
-- [fronend](./frontend)
 - [database](./database)
+- [frontend](./frontend)
 - [IA](./ia)
 
-## Mermaid (Sem suporte para celular)
+## Git
 
-Para criar os seus flowcharts é possível usar o [editor online](https://mermaid.live/)
+> É possível exemplificar o funcionamento das branches
 
-Exemplos de representação de infraestrutura usando `mermaid`
-
-```mermaid
-graph TD
-    usuario[usuario] --> front[front_end]
-    usuario[usuario] --> backend
-    subgraph backend_network
-    direction LR
-    backend[backend] --> database[database]
-    end
-    style backend_network fill:#fff,stroke:#97f,stroke-width:2px,color:#000
-```
-
-Diagrama de estados
+- `main`: Ambiente de produção
+- `homol`: Ambiente de homologação
+- `dev`: Ambiente de desenvolvimento
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Carrinho_vazio
-    Carrinho_vazio --> Carrinho_com_items
-    Carrinho_com_items --> Carrinho_vazio
-    Carrinho_com_items --> Finalizar_compra
-    Finalizar_compra --> Pagamento
-    Finalizar_compra --> Carrinho_com_items
-    Finalizar_compra --> Carrinho_vazio
-    Pagamento --> Pagamento_recusado
-    Pagamento --> Pagamento_aceito
-    Pagamento_aceito --> Enviado_para_entrega
-    Pagamento_recusado --> Carrinho_com_items
-    Enviado_para_entrega --> [*]
+gitGraph
+    commit
+    branch homol
+    branch dev
+    commit
+    commit
+    checkout homol
+    merge dev
+    checkout main
+    merge homol
+    commit
+    commit
 ```
